@@ -1,0 +1,133 @@
+/* --- COINBASE / BASE AESTHETIC --- */
+:root {
+  --bg-color: #ffffff;
+  --text-primary: #050f19;
+  --text-secondary: #5d6778;
+  --coinbase-blue: #0052ff;
+  --coinbase-blue-hover: #0045c2;
+  --border-color: #eef0f3;
+  --card-bg: #ffffff;
+  --success-green: #05b169;
+  --alert-red: #df2020;
+  --radius: 16px;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  padding: 20px;
+  max-width: 600px; /* Mobile-first width constraint */
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.5px;
+}
+
+.primary-btn {
+  background-color: var(--coinbase-blue);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.1s ease;
+}
+
+.primary-btn:active {
+  transform: scale(0.96);
+}
+
+/* Tabs */
+.tab-container {
+  display: flex;
+  background: #f5f8ff;
+  padding: 4px;
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background: white;
+  color: var(--coinbase-blue);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Cards */
+.market-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.market-card:hover {
+  border-color: var(--coinbase-blue);
+}
+
+.market-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.market-sub {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.price-tag {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+.live-tag {
+  font-size: 0.75rem;
+  color: var(--success-green);
+  text-align: right;
+  font-weight: 600;
+}
